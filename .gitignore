@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs
+/CommonLib/bin/Debug
+/CommonLib/obj
+/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
+/TestCommonLib/bin/Debug
+/TestCommonLib/obj
+/TestWebApp/bin
+/TestWebApp/obj/Debug
+/TestWebApp/TestWebApp.vbproj.user
