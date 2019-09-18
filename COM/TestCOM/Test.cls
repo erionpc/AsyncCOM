@@ -14,8 +14,17 @@ Attribute VB_Exposed = True
 Option Explicit
 Const mc_ThisClass As String = "COM.Test"
 
+Private oNetFactory As AsyncCOM_TestCommonLib.Factory
+
 Public Function TestVB6(testInput As String) As String
     Dim result As String
-    result = "Reached VB6 with parameter " & testInput
-    TestVB6 = result
+    result = NetFactory.TestFactoryMethod()
+    TestVB6 = result & " - " & testInput
 End Function
+
+Private Property Get NetFactory() As AsyncCOM_TestCommonLib.Factory
+    If oNetFactory Is Nothing Then
+        Set oNetFactory = New AsyncCOM_TestCommonLib.Factory
+    End If
+    Set NetFactory = oNetFactory
+End Property
